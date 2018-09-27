@@ -8,9 +8,8 @@
 
 # Method 2
 # Time complexity O(n * m) where n and m are lengths of the arrays
-# Space complexity is O(1). The new array does occupy space, but the space
-# allocated in memory is constant, irrespective of the size of the array.
-
+# Space complexity is O(n) or O(m) depending on which array is smaller.
+# This is because a new array is being created to stor the common elements
 def intersection(array1, array2)
   new_array = []
   return new_array if array1 == nil || array2 == nil
@@ -24,8 +23,3 @@ def intersection(array1, array2)
   end
   return new_array
 end
-
-# Method 3
-# If a common element is found, it can be deleted.
-# This will help reduce the time taken slightly as there are less elements to
-# iterate through in case common elements are found.
